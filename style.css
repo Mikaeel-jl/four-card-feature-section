@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: hsl(0, 0%, 98%);
+  color: #4d4f62;
+}
+.container {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  max-width: 540px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+header h1 {
+  font-weight: 200;
+}
+
+h1 span {
+  display: block;
+  font-weight: 600;
+}
+
+header p {
+  margin: 16px auto;
+  font-weight: 200;
+  font-size: 15px;
+}
+
+.box-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.box {
+  background-color: #fff;
+  width: 350px;
+  height: 250px;
+  position: relative;
+  padding: 32px;
+  margin: 15px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 347px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border: 2px solid transparent;
+}
+
+.box-title {
+  font-size: 20px;
+}
+
+.box-content {
+  font-size: 13px;
+  font-weight: 200;
+  margin: 10px 0 50px;
+}
+
+.box-icon {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+
+.box-y-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.box-supervisor::before {
+  border-color: hsl(180, 62%, 55%);
+}
+.box-teambuilder::before {
+  border-color: hsl(0, 78%, 62%);
+}
+.box-karma::before {
+  border-color: hsl(34, 97%, 64%);
+}
+.box-calculator::before {
+  border-color: hsl(212, 86%, 64%);
+}
+
+@media screen and (max-width: 1157px) {
+  .box-center {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+  }
+  .box-y-center {
+    grid-row: 1/3;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .box-center {
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(1, auto);
+  }
+}
+@media screen and (max-width: 580px) {
+  header p {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 415px) {
+  header h1 {
+    width: 297px;
+    font-size: 24px;
+    margin: 0 auto;
+  }
+  header p {
+    width: 311px;
+  }
+}
